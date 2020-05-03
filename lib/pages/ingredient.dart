@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Ingridient extends StatefulWidget {
+class Ingredient extends StatefulWidget {
   @override
-  _IngridientState createState() => _IngridientState();
+  _IngredientState createState() => _IngredientState();
 }
 
-class _IngridientState extends State<Ingridient> {
+class _IngredientState extends State<Ingredient> {
   final List<String> item = <String>['apple', 'banana', 'chicken', 'egg', 'pineapple'];
 
   TextEditingController nameController = TextEditingController();
@@ -23,7 +23,7 @@ class _IngridientState extends State<Ingridient> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.purpleAccent,
-          title: Text('My Ingridients'),
+          title: Text('My Ingredients'),
         ),
         body: Column(
             children: <Widget>[
