@@ -13,8 +13,10 @@ We use Figma to mock-up an app design, use Flutter and Firebase to implement the
 We both have little to no previous experience with Dart/Flutter and Firebase. We've also ran into a number of error at the beginning of the project.
 
 ## Accomplishments that we're proud of
+- Successfully implement basic features of the app.
 
 ## What we learned
+-Firebase Authentication
 
 ## What's next for iCook
 - Users can upload recipes
