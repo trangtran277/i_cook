@@ -30,11 +30,11 @@ Widget How_to_Cook(String recipeName)
               style: TextStyle(fontSize: 20.0)),
               SizedBox(height: 20,), 
               Text("1. In a large non-stick wok or skillet, heat 1 1/2 tsp sesame oil and 1 1/2 tsp of the canola oil over medium-high heat", 
-              style: TextStyle(fontSize: 10.0)),
+              style: TextStyle(fontSize: 20.0)),
               Text("2.Add chicken pieces, season lightly with salt and pepper and saute until cooked through, about 5 – 6 minutes.", 
-              style: TextStyle(fontSize: 10.0)),
+              style: TextStyle(fontSize: 20.0)),
               Text("3.Transfer chicken to a plate or a piece of foil and set aside.", 
-              style: TextStyle(fontSize: 10.0)),
+              style: TextStyle(fontSize: 20.0)),
             ]
         );
 }
