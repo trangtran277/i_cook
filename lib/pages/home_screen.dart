@@ -1,11 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:i_cook/pages/Setup/signIn.dart';
-import 'package:i_cook/pages/ingridient.dart';
+import 'package:i_cook/pages/ingredient.dart';
+import 'package:i_cook/pages/saved_recipes.dart';
 
 class HomeScreen extends StatefulWidget{
 
-  const HomeScreen({Key key, @required this.user}) : super(key: key);
+  const HomeScreen({Key key, this.user}) : super(key: key);
   final FirebaseUser user;
 
   @override
@@ -13,10 +14,58 @@ class HomeScreen extends StatefulWidget{
 }
 
 class _HomeScreenState extends State<HomeScreen>{
+  int navBarIndex = 0;
+
+  void selectPage(int index)
+  {
+    setState(() {
+      if(index == 0)
+      {
+        //Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+      }
+      else if (index == 2)
+      {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => SavedRecipes()));
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+        bottomNavigationBar: new BottomNavigationBar(
+          currentIndex: navBarIndex,
+          onTap: (int index)
+          {
+            setState(() {
+              navBarIndex = index;
+              selectPage(index);
+            });
+          },
+          items: [
+            new BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage("https://picsum.photos/250?image=9"),
+                size: 0,
+              ),
+              title: Text('Home', textScaleFactor: 1.5,),
+            ),
+            new BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage("https://www.iconspng.com/images/person-icon/person-icon.jpg"),
+                size: 0,
+              ),
+              title: Text('Search', textScaleFactor: 1.5,),
+            ),
+            new BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage("https://www.iconspng.com/images/person-icon/person-icon.jpg"),
+                size: 0,
+              ),
+              title: Text('Saved Recipes', textScaleFactor: 1.5,),
+            ),
+          ],
+        ),
         body: new Stack(
           children: <Widget>[
             Positioned(
@@ -62,22 +111,22 @@ class _HomeScreenState extends State<HomeScreen>{
                 RaisedButton(
                       color: Colors.deepPurpleAccent,
                     child: Text(
-                        "My Ingridients",
+                        "My Ingredients",
                         style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.white,)
                     ),
                     onPressed:() {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) =>
-                        Ingridient()),
+                        Ingredient()),
                       );
                     }
                 ),
-
-              ],)
-            )
+              ],
+              ),
+            ),
           ],
-        )
+        ),
       );
   }
 }
