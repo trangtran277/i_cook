@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:i_cook/pages/ingridient.dart';
 
 class HomeScreen extends StatefulWidget{
 
@@ -41,18 +42,39 @@ class _HomeScreenState extends State<HomeScreen>{
                     fontWeight: FontWeight.bold,
                   )
                 ),
-                Container(margin: const EdgeInsets.all(30.0),
-                  padding: const EdgeInsets.all(10.0),
-                  decoration: BoxDecoration(
+                SizedBox(height: 15.0),
+                Container(
+                  height: 20.0,
+                  width: 95.0,
+                  child:Material(
+                    borderRadius: BorderRadius.circular(20.0),
+                    color: Colors.grey,
+                    elevation: 7.0,
+                    child: GestureDetector(
+                      onTap: () {},
+                      child:Center(
+                        child: Text(
+                          "Log out",
+                          style: TextStyle(color: Colors.white)
+                        )
+                      )
+                      ,
+                    )
+                    )),
+                SizedBox(height: 15.0),
+                RaisedButton(
                       color: Colors.deepPurpleAccent,
-                      borderRadius: BorderRadius.all(
-                          Radius.circular(10.0))
-                  ),
-
-                  child: Text(
-                      "My Ingridients",
-                      style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.white,)
-                ),
+                    child: Text(
+                        "My Ingridients",
+                        style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.white,)
+                    ),
+                    onPressed:() {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>
+                        Ingridient()),
+                      );
+                    }
                 ),
 
               ],)
