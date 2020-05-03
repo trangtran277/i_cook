@@ -34,7 +34,7 @@ class HomeScreenState extends State<HomeScreen>{
                 ),),
                 SizedBox(height: 20.0),
                 Text(
-                  "John Doe",
+                  "${widget.user.email}",
                   style: TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
