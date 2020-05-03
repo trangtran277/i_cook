@@ -7,10 +7,11 @@ class HomeScreen extends StatefulWidget{
   final FirebaseUser user;
 
   @override
-  HomeScreenState createState()=>new HomeScreenState();
+  _HomeScreenState createState()=>new _HomeScreenState();
 }
 
-class HomeScreenState extends State<HomeScreen>{
+class _HomeScreenState extends State<HomeScreen>{
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -36,10 +37,24 @@ class HomeScreenState extends State<HomeScreen>{
                 Text(
                   "${widget.user.email}",
                   style: TextStyle(
-                    fontSize: 20.0,
+                    fontSize: 15.0,
                     fontWeight: FontWeight.bold,
                   )
-                )
+                ),
+                Container(margin: const EdgeInsets.all(30.0),
+                  padding: const EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurpleAccent,
+                      borderRadius: BorderRadius.all(
+                          Radius.circular(10.0))
+                  ),
+
+                  child: Text(
+                      "My Ingridients",
+                      style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.white,)
+                ),
+                ),
+
               ],)
             )
           ],
