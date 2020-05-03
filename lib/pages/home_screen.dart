@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:i_cook/pages/Setup/signIn.dart';
 import 'package:i_cook/pages/ingredient.dart';
 import 'package:i_cook/pages/saved_recipes.dart';
+import 'package:i_cook/pages/search_recipe.dart';
 
 class HomeScreen extends StatefulWidget{
 
@@ -25,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen>{
       }
       else if (index == 1)
       {
-
+        Navigator.push(context, MaterialPageRoute(builder: (context) => SearchPage()));
       }
       else if (index == 2)
       {
