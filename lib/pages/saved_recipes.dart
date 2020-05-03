@@ -1,9 +1,11 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:i_cook/pages/recipe.dart';
 
 import 'home_screen.dart';
 
 class SavedRecipes extends StatefulWidget{
+
   @override
   _SavedRecipesState createState(){
     return new _SavedRecipesState();
@@ -19,7 +21,7 @@ class _SavedRecipesState extends State<SavedRecipes>{
     setState(() {
       if(index == 0)
       {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+        //Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
       }
       else if (index == 1)
       {
