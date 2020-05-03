@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:i_cook/pages/Setup/signIn.dart';
-import 'package:i_cook/pages/ingridient.dart';
+import 'package:i_cook/pages/ingredient.dart';
 import 'package:i_cook/pages/saved_recipes.dart';
 
 class HomeScreen extends StatefulWidget{
@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen>{
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) =>
-                        Ingridient()),
+                        Ingredient()),
                       );
                     }
                 ),
