@@ -97,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen>{
                       color: Colors.grey,
                     child: Text(
                         "log out",
-                        style: TextStyle(fontSize: 10.0, color: Colors.black,)
+                        style: TextStyle(fontSize: 15.0, color: Colors.black,)
                     ),
                     onPressed:() {
                       Navigator.push(
