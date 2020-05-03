@@ -17,3 +17,9 @@ We both have little to no previous experience with Dart/Flutter and Firebase. We
 ## What we learned
 
 ## What's next for iCook
+- Users can upload recipes
+- Categorize ingredients
+- Keep track of amount for each ingredient
+- Remove/change ingredients from list
+- Expiration date or when they bought it and the app will reminds user when their ingredients go back
+
