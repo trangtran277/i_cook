@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "680250012375",
+    "firebase_url": "https://icook-764d4.firebaseio.com",
+    "project_id": "icook-764d4",
+    "storage_bucket": "icook-764d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:680250012375:android:a60f328b149978ae72b692",
+        "android_client_info": {
+          "package_name": "com.example.i_cook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "680250012375-d5b941iquev8c6umb28nvoidg973gugk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDATXHxmjm6X3hP6SQJoa8LH6ORDqSX6t4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "680250012375-d5b941iquev8c6umb28nvoidg973gugk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
