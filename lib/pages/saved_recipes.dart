@@ -21,6 +21,10 @@ class _SavedRecipesState extends State<SavedRecipes>{
       {
         Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
       }
+      else if (index == 1)
+      {
+
+      }
       else if (index == 2)
       {
         //Navigator.push(context, MaterialPageRoute(builder: (context) => SavedRecipes()));
