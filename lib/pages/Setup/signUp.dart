@@ -1,14 +1,15 @@
-import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:i_cook/pages/Setup/signUp.dart';
-import 'package:i_cook/pages/home_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:i_cook/pages/Setup/signIn.dart';
 
-class SigninPage extends StatefulWidget {
+import '../home_screen.dart';
+
+class SignupPage extends StatefulWidget {
   @override
-  _SigninPageState createState() => _SigninPageState();
+  _SignupPageState createState() => _SignupPageState();
 }
 
-class _SigninPageState extends State<SigninPage> {
+class _SignupPageState extends State<SignupPage> {
   String _email, _password;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -21,7 +22,7 @@ class _SigninPageState extends State<SigninPage> {
         key: _formKey,
         child: Column(
           children: <Widget>[
-          //Implement fields
+            //Implement fields
             TextFormField(
               validator: (input){
                 if (input.isEmpty){
@@ -30,7 +31,7 @@ class _SigninPageState extends State<SigninPage> {
               },
               onSaved: (input) => _email = input,
               decoration: InputDecoration(
-                labelText: 'Email'
+                  labelText: 'Email'
               ),
             ),
             TextFormField(
@@ -49,36 +50,31 @@ class _SigninPageState extends State<SigninPage> {
               obscureText: true,
             ),
             RaisedButton(
-              onPressed: signIn,
-              child: Text('Sign in'),
-            ),
-            RaisedButton(
               onPressed: signUp,
-              child: Text('Create account'),
-            ),
+              child: Text('Sign up'),
+            )
           ],
         ),
       ),
     );
   }
 
-  Future<void> signIn() async {
+  Future<void> signUp() async {
     //validate fields
     final formState = _formKey.currentState;
     if (formState.validate()){
       formState.save();
       try{
-        AuthResult result = await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password);
+        AuthResult result = await FirebaseAuth.instance.createUserWithEmailAndPassword(email: _email, password: _password);
         FirebaseUser user = result.user;
-        Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(user: user)));
+        //user.sendEmailVerification();
+        //display notification
+        Navigator.of(context).pop();
+        Navigator.push(context, MaterialPageRoute(builder: (context) => SigninPage(), fullscreenDialog: true));
       } catch(e){
         print(e.message);
       }
     }
     // login to firebase
-  }
-
-  void signUp() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => SignupPage(), fullscreenDialog: true));
   }
 }
