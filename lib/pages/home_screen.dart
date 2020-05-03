@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:i_cook/pages/Setup/signIn.dart';
 import 'package:i_cook/pages/ingridient.dart';
 
 class HomeScreen extends StatefulWidget{
@@ -43,24 +44,20 @@ class _HomeScreenState extends State<HomeScreen>{
                   )
                 ),
                 SizedBox(height: 15.0),
-                Container(
-                  height: 20.0,
-                  width: 95.0,
-                  child:Material(
-                    borderRadius: BorderRadius.circular(20.0),
-                    color: Colors.grey,
-                    elevation: 7.0,
-                    child: GestureDetector(
-                      onTap: () {},
-                      child:Center(
-                        child: Text(
-                          "Log out",
-                          style: TextStyle(color: Colors.white)
-                        )
-                      )
-                      ,
-                    )
-                    )),
+                RaisedButton(
+                      color: Colors.grey,
+                    child: Text(
+                        "log out",
+                        style: TextStyle(fontSize: 10.0, color: Colors.black,)
+                    ),
+                    onPressed:() {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>
+                        SigninPage()),
+                      );
+                    }
+                ),
                 SizedBox(height: 15.0),
                 RaisedButton(
                       color: Colors.deepPurpleAccent,
