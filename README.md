@@ -1,16 +1,27 @@
-# i_cook
+# iCook
 
-A new Flutter project.
+## Inspiration
+We have all been in that situation where we look at the food we have in our home and have no clue what meal we can make. So we came up with iCook, an app that help you solve this problem. During the Covid-19 pandemic, it is nessacery for us to self-isolate to flatten the curve. This mean essential trips to get grocery should also be minimized. As a result, many of us have had to get more creative with what we have at home.
 
-## Getting Started
+## What it does
+iCook lets you add and remove from a persional ingredients list. A user can then use that ingredient list to look for recipes, or simply look for a recipe by name. Recipes can also be saved for easy access in the future.
 
-This project is a starting point for a Flutter application.
+## How we built it
+We use Figma to mock-up an app design, use Flutter and Firebase to implement the app.
 
-A few resources to get you started if this is your first Flutter project:
+## Challenges we ran into
+We both have little to no previous experience with Dart/Flutter and Firebase. We've also ran into a number of error at the beginning of the project.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Accomplishments that we're proud of
+- Successfully implement basic features of the app.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## What we learned
+- Firebase Authentication
+
+## What's next for iCook
+- Users can upload recipes
+- Categorize ingredients
+- Keep track of amount for each ingredient
+- Remove/change ingredients from list
+- Expiration date or when they bought it and the app will reminds user when their ingredients go back
+
