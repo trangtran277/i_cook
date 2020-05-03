@@ -27,10 +27,6 @@ class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.green[300],
-          title: Text('Search'),
-        ),
         bottomNavigationBar: new BottomNavigationBar(
           currentIndex: navBarIndex,
           onTap: (int index)
@@ -76,7 +72,11 @@ class _SearchPageState extends State<SearchPage> {
                     icon: Icon(Icons.search),
                   ),
                 ),
-              ),  
+              ),
+              SizedBox(height: 10,),
+              Text("or Pick ingredients to start", 
+              style: TextStyle(fontSize: 20.0)),
+              SizedBox(height: 10,), 
             ]
         )
     );
