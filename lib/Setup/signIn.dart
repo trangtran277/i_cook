@@ -71,8 +71,7 @@ class _LoginPageState extends State<LoginPage> {
         FirebaseUser user = result.user;
         Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
       }catch(e){
-        print(e.message);
-      }
+        print(e.message);      }
 
     }
     // login to firebase
