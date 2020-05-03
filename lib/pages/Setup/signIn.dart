@@ -16,13 +16,15 @@ class _SigninPageState extends State<SigninPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomPadding: true,
-      body: Form(
-        key: _formKey,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-          //Implement fields
+      body: Container(
+        margin: EdgeInsets.only(left: 60, right: 60),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+            //Implement fields
             TextFormField(
               validator: (input){
                 if (input.isEmpty){
@@ -59,6 +61,7 @@ class _SigninPageState extends State<SigninPage> {
             ),
           ],
         ),
+      ),
       ),
     );
   }

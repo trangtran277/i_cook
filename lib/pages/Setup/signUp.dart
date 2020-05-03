@@ -17,44 +17,58 @@ class _SignupPageState extends State<SignupPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text('Create Account'),
       ),
-      body: Form(
-        key: _formKey,
-        child: Column(
-          children: <Widget>[
-            //Implement fields
-            TextFormField(
-              validator: (input){
-                if (input.isEmpty){
-                  return 'Email missing!';
-                }
-              },
-              onSaved: (input) => _email = input,
-              decoration: InputDecoration(
-                  labelText: 'Email'
+      body: Container(
+        margin: EdgeInsets.only(left: 60, right: 60, top: 20),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: <Widget>[
+              TextFormField(
+                validator: (input){
+                  if (input.isEmpty){
+                    return 'Name missing!';
+                  }
+                },
+                onSaved: (input) => _email = input,
+                decoration: InputDecoration(
+                    labelText: 'Name'
+                ),
+              ),//Implement fields
+              TextFormField(
+                validator: (input){
+                  if (input.isEmpty){
+                    return 'Email missing!';
+                  }
+                },
+                onSaved: (input) => _email = input,
+                decoration: InputDecoration(
+                    labelText: 'Email'
+                ),
               ),
-            ),
-            TextFormField(
-              validator: (input){
-                if (input.isEmpty){
-                  return 'Password missing!';
-                }
-                else if (input.length < 8){
-                  return 'Please enter a password with length 8 or more';
-                }
-              },
-              onSaved: (input) => _password = input,
-              decoration: InputDecoration(
-                  labelText: 'Password'
+              TextFormField(
+                validator: (input){
+                  if (input.isEmpty){
+                    return 'Password missing!';
+                  }
+                  else if (input.length < 8){
+                    return 'Please enter a password with length 8 or more';
+                  }
+                },
+                onSaved: (input) => _password = input,
+                decoration: InputDecoration(
+                    labelText: 'Password'
+                ),
+                obscureText: true,
               ),
-              obscureText: true,
-            ),
-            RaisedButton(
-              onPressed: signUp,
-              child: Text('Sign up'),
-            )
+              RaisedButton(
+                onPressed: signUp,
+                child: Text('Sign up'),
+              )
           ],
         ),
+      ),
       ),
     );
   }
