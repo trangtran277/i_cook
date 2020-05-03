@@ -35,6 +35,20 @@ Widget How_to_Cook(String recipeName)
               style: TextStyle(fontSize: 20.0)),
               Text("3.Transfer chicken to a plate or a piece of foil and set aside.", 
               style: TextStyle(fontSize: 20.0)),
+              Text("4.Return skillet to medium-high heat, add remaining 1 1/2 tsp sesame oil and 1 1/2 tsp canola oil.", 
+              style: TextStyle(fontSize: 20.0)),
+              Text("5.Add peas and carrots blend and green onions and saute 1 minute, then add garlic and saute 1 minute longer.", 
+              style: TextStyle(fontSize: 20.0)),
+              Text("6.Push veggies to edges of pan.", 
+              style: TextStyle(fontSize: 20.0)),
+              Text("7.Add eggs in center and cook and scramble until just set.", 
+              style: TextStyle(fontSize: 20.0)),
+              Text("8.Return chicken to skillet along with rice.", 
+              style: TextStyle(fontSize: 20.0)),
+              Text("9.Add in soy sauce and season with salt and pepper to taste.", 
+              style: TextStyle(fontSize: 20.0)),
+              Text("10. Toss everything together and serve warm with Sriracha to taste if desired.", 
+              style: TextStyle(fontSize: 20.0)),
             ]
         );
 }
